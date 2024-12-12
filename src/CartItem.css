@@ -241,3 +241,9 @@
     margin-top: 40px;
   }
   
+  .coming-soon-text {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+}

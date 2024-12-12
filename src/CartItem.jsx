@@ -77,6 +77,7 @@ const CartItem = ({ onContinueShopping }) => {
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
         <button className="get-started-button1">Checkout</button>
+        <div className="coming-soon-text">Coming Soon</div>
       </div>
     </div>
   );
