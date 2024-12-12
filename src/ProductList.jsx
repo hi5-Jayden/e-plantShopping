@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { addItem } from './CartSlice'; 
 import './ProductList.css';
@@ -12,6 +12,14 @@ function ProductList() {
     const [addedToCart, setAddedToCart] = useState({});
 
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+    useEffect(() => {
+        const cartItemsMap = {};
+        cartItems.forEach(item => {
+            cartItemsMap[item.name] = true;
+        });
+        setAddedToCart(cartItemsMap);
+    }, [cartItems]);
 
     const plantsArray = [
         {
